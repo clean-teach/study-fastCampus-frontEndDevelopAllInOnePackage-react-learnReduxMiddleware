@@ -4,7 +4,7 @@ import App from './App';
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './modules';
-// import myLogger from './middlewares/myLogger'; // 직접 만들어본 미들웨어 (리덕스 상태와 디스패치를 로깅 하는 미들웨어)
+// import myLogger from './middlewares/myLogger'; /* 직접 만들어본 미들웨어 (리덕스 상태와 디스패치를 로깅 하는 미들웨어) */
 import reduxLogger from 'redux-logger'; /* redux logger : 객체와 상태를 콘솔창에 로깅 */
 import { composeWithDevTools } from '@redux-devtools/extension'; /* 브라우저의 개발자 도구에서 redux를 확인 할 수 있게 해주는 확장기능 */
 import reduxThunk from 'redux-thunk'; /* redux thunk : 함수를 dispatch 할 수 있게 해주는 middleware */
