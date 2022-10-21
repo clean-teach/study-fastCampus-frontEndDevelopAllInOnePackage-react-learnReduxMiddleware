@@ -13,7 +13,15 @@ import { BrowserRouter } from 'react-router-dom'; /* 라우터, 히스토리 사
 // const store = createStore(rootReducer, applyMiddleware(myLogger, reduxLogger));  // 미들웨어 직접 만들어보기 실습, redux-logger와 비교
   // applyMiddleware()에는 여러개의 미들웨어를 적용 가능
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(reduxThunk, reduxLogger))); // redux-logger, @redux-devtools 적용
+const store = createStore(
+  rootReducer, 
+  composeWithDevTools(
+    applyMiddleware(
+      reduxThunk, 
+      reduxLogger
+    )
+  )
+); // redux-logger, @redux-devtools, reduxThunk 적용
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
