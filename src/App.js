@@ -1,6 +1,8 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import CounterContainer from "./containers/CounterContainer";
-import PostListContainer from './containers/PostListContainer';
+import PostListPage from './pages/PostListPage';
+import PostPage from './pages/PostPage';
 
 function App() {
   return (
@@ -11,7 +13,10 @@ function App() {
       <CounterContainer />
       <hr />
       <h2>프로미스 다루기</h2>
-      <PostListContainer />
+      <Routes>
+        <Route path="/" element={<PostListPage />} exact={true} />
+        <Route path="/:id" element={<PostPage />} />
+      </Routes>
     </>
   );
 }
