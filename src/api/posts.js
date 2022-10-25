@@ -36,12 +36,25 @@ import axios from 'axios';
 // };
 
 /* data.json 으로 만든 가짜 서버 조회 용 비동기 함수 */
-export const getPosts = async () => {
-  const response = await axios.get('http://localhost:4000/posts');
+// export const getPosts = async () => {
+//   const response = await axios.get('http://localhost:4000/posts');
+//   return response.data;
+// };
+
+// export const getPostById = async id => {
+//   const response = await axios.get(`http://localhost:4000/posts/${id}`);
+//   return response.data;
+// };
+
+/* package.JSOM 에서 "proxy" 값을 설정 */
+// 포스트 목록을 가져오는 비동기 함수
+export const getPosts = async() => {
+  const response = await axios.get('/posts');
   return response.data;
 };
 
+// ID로 포스트를 조회하는 비동기 함수
 export const getPostById = async id => {
-  const response = await axios.get(`http://localhost:4000/posts/${id}`);
+  const response = await axios.get(`/posts/${id}`);
   return response.data;
 };
